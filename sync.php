@@ -30,6 +30,7 @@ foreach ($insertTagArr as $tag) {
     $resul = shell_exec("cd {$mySwaggerDir} && git add . && git commit -m '{$tag}'");
     $resul = shell_exec("cd {$mySwaggerDir} && git tag {$tag}");
     var_dump("tag:{$tag}");
+    die();
 }
 
 //shell_exec("cd {$mySwaggerDir} && git push --tags");
