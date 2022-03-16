@@ -20,6 +20,7 @@ if (empty($insertTagArr)) {
     var_dump('没有需要打包的tag');
     return;
 }
+
 foreach ($insertTagArr as $tag) {
     // checkout
     shell_exec("cd {$swaggerDir} && git checkout {$tag}");
@@ -30,7 +31,6 @@ foreach ($insertTagArr as $tag) {
     $resul = shell_exec("cd {$mySwaggerDir} && git add . && git commit -m '{$tag}'");
     $resul = shell_exec("cd {$mySwaggerDir} && git tag {$tag}");
     var_dump("tag:{$tag}");
-    die();
 }
 
 //shell_exec("cd {$mySwaggerDir} && git push --tags");
