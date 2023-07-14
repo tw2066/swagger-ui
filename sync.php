@@ -9,7 +9,7 @@ $tags = shell_exec("cd {$swaggerDir} && git tag");
 $tagArr = explode(PHP_EOL, $tags);
 
 $tagArr = array_filter($tagArr, function ($value) {
-    return startsWith($value, 'v4');
+    return startsWith($value, 'v5');
 });
 
 $myTags = shell_exec("cd {$mySwaggerDir} && git tag");
