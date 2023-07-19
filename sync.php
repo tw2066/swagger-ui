@@ -33,7 +33,7 @@ foreach ($insertTagArr as $tag) {
     var_dump("tag:{$tag}");
 }
 
-//shell_exec("cd {$mySwaggerDir} && git push --tags");
+shell_exec("cd {$mySwaggerDir} && git push --tags");
 
 function startsWith($haystack, $needles)
 {
